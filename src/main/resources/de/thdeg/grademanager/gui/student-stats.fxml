@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thdeg.grademanager.gui.StudentStatsController">
+   <top>
+      <VBox fillWidth="false" prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar buttonMinWidth="30.0" prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <Button alignment="CENTER" minWidth="22.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="26.0" text="←" />
+                  <Button alignment="CENTER" disable="true" layoutX="31.0" layoutY="17.0" minWidth="22.0" mnemonicParsing="false" prefHeight="26.0" text="→" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="22.0" prefWidth="600.0" />
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="600.0">
+               <children>
+                  <Button focusTraversable="false" layoutX="263.0" layoutY="16.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="153.0" text="CSV-Export" />
+                  <Region layoutX="194.0" layoutY="10.0" prefHeight="52.0" prefWidth="46.0" />
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#savePdf" prefHeight="26.0" prefWidth="127.0" text="PDF-Export" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0">
+               <children>
+                  <Text fx:id="headLine" strokeType="OUTSIDE" strokeWidth="0.0" text="Notenblatt Student">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <TableView fx:id="enrollmentTableView" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="courseColumn" prefWidth="100.0" resizable="false" style="-fx-alignment: CENTER;" text="Kurs" />
+                      <TableColumn fx:id="gradeColumn" prefWidth="100.0" resizable="false" style="-fx-alignment: CENTER;" text="Note" />
+                    </columns>
+                  </TableView>
+                  <Region prefHeight="26.0" prefWidth="139.0" />
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <PieChart fx:id="statsDiagram" disable="true" labelLineLength="500.0" labelsVisible="false" legendSide="RIGHT" legendVisible="false" prefHeight="684.0" prefWidth="200.0" title="Prüfungen" />
+                        <Label fx:id="passedExams" text="• Bestanden: ">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label fx:id="failedExams" layoutX="10.0" layoutY="160.0" text="• Durchgefallen:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label fx:id="openExams" layoutX="10.0" layoutY="177.0" text="• Offen:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="116.0" prefWidth="600.0">
+               <children>
+                  <Label text="Studiengang:">
+                     <HBox.margin>
+                              <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="0.0" prefWidth="118.0" />
+                  <TextField fx:id="courseOfStudy" alignment="CENTER" disable="true" editable="false" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0">
+               <children>
+                  <Label text="Semester:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="637.0" prefWidth="141.0" />
+                  <TextField fx:id="semester" alignment="CENTER" disable="true" editable="false" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0">
+               <children>
+                  <Label contentDisplay="CENTER" text="Matrikel-Nr.:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="126.0" />
+                  <TextField fx:id="studentId" alignment="CENTER" disable="true" editable="false" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="349.0" prefHeight="115.0" prefWidth="600.0">
+               <children>
+                  <Label contentDisplay="CENTER" text="Durchschnitt">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="126.0" />
+                  <TextField fx:id="average" alignment="CENTER" disable="true" editable="false" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="302.0" prefHeight="115.0" prefWidth="600.0">
+               <children>
+                  <Label text="Median:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="27.0" prefWidth="157.0" />
+                  <TextField fx:id="median" alignment="CENTER" disable="true" editable="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

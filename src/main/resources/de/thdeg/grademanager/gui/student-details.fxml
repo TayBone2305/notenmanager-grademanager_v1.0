@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thdeg.grademanager.gui.StudentDetailsController">
+   <top>
+      <VBox fillWidth="false" prefHeight="46.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar buttonMinWidth="30.0" prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <Button alignment="CENTER" minWidth="22.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="26.0" text="←" />
+                  <Button alignment="CENTER" disable="true" layoutX="31.0" layoutY="17.0" minWidth="22.0" mnemonicParsing="false" prefHeight="26.0" text="→" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <Label fx:id="welcomeText" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox prefHeight="243.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Informationen zum Student">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Geschlecht">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="38.0" prefWidth="127.0" />
+                  <ComboBox fx:id="genderComboBox" prefHeight="26.0" prefWidth="278.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Vorname">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="139.0" />
+                  <TextField fx:id="firstName" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Nachname">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="126.0" />
+                  <TextField fx:id="lastName" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Wohnort">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="139.0" />
+                  <TextField fx:id="placeOfResidence" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Geburtsort">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="38.0" prefWidth="129.0" />
+                  <TextField fx:id="birthPlace" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Studiengang">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="118.0" />
+                  <TextField fx:id="coursesOfStudy" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Semester">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="141.0" />
+                  <ComboBox fx:id="semesterComboBox" prefHeight="26.0" prefWidth="278.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Matrikel-Nr.">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="26.0" prefWidth="126.0" />
+                  <TextField fx:id="studentID" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+               <children>
+                  <Label text="Email">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="28.0" prefWidth="168.0" />
+                  <TextField fx:id="officialEmail" disable="true" prefHeight="26.0" prefWidth="280.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="468.0">
+               <children>
+                  <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#onModifyButtonClick" text="Bearbeiten" />
+                  <Region prefHeight="40.0" prefWidth="55.0" />
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Speichern" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="105.0" prefWidth="858.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="600.0">
+               <children>
+                  <ComboBox fx:id="coursesOfStudyComboBox" onAction="#assignCoursesOfStudy" prefHeight="30.0" prefWidth="189.0" promptText="Studiengang zuweisen" />
+                  <Region prefHeight="52.0" prefWidth="42.0" />
+                  <Button layoutX="263.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToStudentCourses" prefHeight="26.0" prefWidth="153.0" text="Noten zuweisen" />
+                  <Region layoutX="194.0" layoutY="10.0" prefHeight="52.0" prefWidth="46.0" />
+                  <Button mnemonicParsing="false" onAction="#switchToStudentStats" prefHeight="26.0" prefWidth="127.0" text="Statistiken anzeigen" />
+               </children>
+            </HBox>
+            <Region prefHeight="18.0" prefWidth="858.0" />
+            <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="594.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onRemoveButtonClick" prefHeight="26.0" prefWidth="111.0" style="-fx-background-color: CD5C5C;" text="Student löschen" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets bottom="7.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thdeg.grademanager.gui.MainController">
+    <top>
+        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fillWidth="false" prefHeight="47.0" prefWidth="600.0">
+                    <children>
+                        <ButtonBar buttonMinWidth="30.0" prefHeight="40.0" prefWidth="200.0">
+                            <buttons>
+                                <Button alignment="CENTER" disable="true" minWidth="22.0" mnemonicParsing="false" prefHeight="26.0" text="←" />
+                                <Button alignment="CENTER" disable="true" layoutX="31.0" layoutY="17.0" minWidth="22.0" mnemonicParsing="false" prefHeight="26.0" text="→" />
+                                <Region prefHeight="200.0" prefWidth="200.0" />
+                            </buttons>
+                        </ButtonBar>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" prefHeight="170.0" prefWidth="600.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notenmanager" textAlignment="CENTER" wrappingWidth="253.30859375">
+                            <font>
+                                <Font size="38.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" wrappingWidth="54.114078521728516" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+    </bottom>
+    <center>
+        <VBox prefHeight="198.0" prefWidth="128.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <ComboBox fx:id="coursesOfStudyComboBox" onAction="#switchToCoursesOfStudyDetails" prefHeight="30.0" prefWidth="250.0" promptText="Studiengang wählen" />
+                        <ComboBox fx:id="studentComboBox" layoutX="254.0" layoutY="46.0" onAction="#switchToStudentDetails" prefHeight="30.0" prefWidth="250.0" promptText="Student wählen" />
+                    </children>
+                </HBox>
+                <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Region prefHeight="94.0" prefWidth="24.0" />
+                        <Button defaultButton="true" onAction="#switchToCoursesOfStudyModification" prefHeight="26.0" prefWidth="129.0" text="Studiengang anlegen">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin></Button>
+                        <Region prefHeight="94.0" prefWidth="119.0" />
+                        <Region prefHeight="94.0" prefWidth="52.0" />
+                        <Button defaultButton="true" onAction="#switchToStudentModification" prefHeight="26.0" prefWidth="110.0" text="Student anlegen">
+                            <HBox.margin>
+                                <Insets right="50.0" />
+                            </HBox.margin></Button>
+                        <Region prefHeight="94.0" prefWidth="112.0" />
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <left>
+        <Label fx:id="welcomeText" BorderPane.alignment="CENTER" />
+    </left>
+</BorderPane>

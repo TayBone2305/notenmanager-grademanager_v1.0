@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.thdeg.grademanager.gui.StudentCoursesController">
+   <top>
+      <VBox fillWidth="false" prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar buttonMinWidth="30.0" prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <Button alignment="CENTER" minWidth="22.0" mnemonicParsing="false" onAction="#switchToStudentDetails" prefHeight="26.0" text="←" />
+                  <Button alignment="CENTER" disable="true" layoutX="31.0" layoutY="17.0" minWidth="22.0" mnemonicParsing="false" prefHeight="26.0" text="→" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="171.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Notenzuweisung">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="340.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kurse:" wrappingWidth="40.19885563850403" />
+                  <Region prefHeight="99.0" prefWidth="18.0" />
+                  <ListView fx:id="coursesListView" editable="true" onMouseClicked="#onCourseClick" prefHeight="133.0" prefWidth="270.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
